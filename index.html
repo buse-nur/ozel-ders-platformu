@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Özel Ders Platformu</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>    <div id="app">
+        <!-- YENİ LANDING BÖLÜMÜ (Kapsamlı Tasarım) -->
+        <div id="landing-section">
+            <div class="bg-bubbles">
+                <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+                <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+                <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+            </div>
+            <!-- HEADER (Üst Bilgi) -->
+            <header class="landing-header">
+                <div class="header-container">
+                    <div class="logo">ÖZEL DERS PORTALI</div>
+                    <nav class="top-nav">
+                        <a href="#hero">Ana Sayfa</a>
+                        <a href="#value-props">Neden Biz?</a>
+                        <a href="#campaigns">Kampanyalar</a>
+                        <a href="#faq">SSS</a>
+                        <a href="javascript:void(0)" onclick="openAuthModal('selection')" class="nav-cta">Hemen Başla</a>
+                    </nav>
+                </div>
+            </header>
+
+            <!-- HERO SECTION -->
+            <section id="hero" class="hero-section">
+                <div class="landing-content">
+                    <div class="landing-text-area">
+                        <div class="brand-aura"></div>
+                        <h1 class="landing-title">
+                            <span class="title-main">ÖZEL DERS</span>
+                            <span class="title-accent">PORTALI</span>
+                        </h1>
+                        <p class="landing-subtitle">Uzman öğretmenlerle birebir ders imkanı. Bütçenizi siz belirleyin, hedeflerinize birlikte koşalım.</p>
+                        <div class="hero-btns">
+                            <button class="primary-btn" onclick="openAuthModal('register')">Ücretsiz Kayıt Ol</button>
+                            <button class="secondary-btn" onclick="document.getElementById('value-props').scrollIntoView({behavior:'smooth'})">Daha Fazla Bilgi</button>
+                        </div>
+                    </div>
+                    <div class="landing-image-area">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=1200" alt="Özel Ders İletişim Platformu" class="hero-image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- VALUE PROPOSITIONS (Değer Önerileri) -->
+            <section id="value-props" class="section-padding">
+                <div class="section-header">
+                    <h2>Neden Bizi Seçmelisiniz?</h2>
+                    <p>Sizlerin başarısı için her detayı düşündük.</p>
+                </div>
+                <div class="how-it-works-grid">
+                    <div class="step-card">
+                        <div class="step-icon">🎯</div>
+                        <h3>Kişiselleştirilmiş Eğitim</h3>
+                        <p>Her öğrencinin öğrenme hızı farklıdır. Size özel ders planlarıyla başarıya ulaşın.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">💎</div>
+                        <h3>Uzman Eğitmen Kadrosu</h3>
+                        <p>Deneyimli ve onaylanmış öğretmenlerle en kaliteli eğitimi alın.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">💰</div>
+                        <h3>Esnek Fiyatlandırma</h3>
+                        <p>Kendi bütçenize uygun teklifler sunarak tasarruf edin.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">📱</div>
+                        <h3>Kolay İletişim</h3>
+                        <p>Gelişmiş mesajlaşma ve teklif sistemi ile her şey parmaklarınızın ucunda.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NEW CAMPAIGNS (Yeni Kampanyalar) -->
+            <section id="campaigns" class="campaign-section section-padding">
+                <div class="campaign-container">
+                    <div class="campaign-card gold-glow">
+                        <div class="camp-tag">YENİ</div>
+                        <h3>İlk Ders %50 İndirimli!</h3>
+                        <p>Sisteme yeni katılan tüm öğrencilere ilk derslerinde %50 indirim fırsatı.</p>
+                        <button class="action-btn" onclick="openAuthModal('register')">Fırsatı Yakala</button>
+                    </div>
+                    <div class="campaign-card blue-glow">
+                        <div class="camp-tag">SINIRLI SÜRE</div>
+                        <h3>Arkadaşını Getir, Bonus Kazan!</h3>
+                        <p>Platforma davet ettiğiniz her arkadaşınız için 100 TL hediye çeki.</p>
+                        <button class="action-btn" onclick="openAuthModal('register')">Hemen Davet Et</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION LEFT IMAGE RIGHT CONTENT -->
+            <section id="features-student" class="feature-section left-img section-padding">
+                <div class="feature-container">
+                    <div class="feature-img">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1000" alt="Öğrenci Deneyimi">
+                    </div>
+                    <div class="feature-text">
+                        <span class="pre-title">Öğrenci Deneyimi</span>
+                        <h2>Hayalindeki Eğitmeni Bul</h2>
+                        <p>Binlerce öğretmen arasından branşına, puanına ve ücretine göre en uygun olanı saniyeler içinde seç. Doğrudan mesaj at ve ders planını yap.</p>
+                        <ul class="feature-list">
+                            <li>✅ Ücretsiz İlan Verme</li>
+                            <li>✅ Güvenli Teklif Sistemi</li>
+                            <li>✅ Kolay Ders Takibi</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION RIGHT IMAGE LEFT CONTENT -->
+            <section id="features-teacher" class="feature-section right-img section-padding">
+                <div class="feature-container">
+                    <div class="feature-text">
+                        <span class="pre-title">Öğretmenler İçin</span>
+                        <h2>Kendi İşinin Patronu Ol</h2>
+                        <p>Dilediğin saatlerde, dilediğin ücretle ders ver. Platformumuz üzerinden binlerce öğrenciye ulaş ve kazancını artır.</p>
+                        <ul class="feature-list">
+                            <li>✅ Komisyonsuz Kazanç</li>
+                            <li>✅ Esnek Çalışma Saatleri</li>
+                            <li>✅ Profilini Öne Çıkar</li>
+                        </ul>
+                    </div>
+                    <div class="feature-img">
+                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1000" alt="Öğretmen Deneyimi">
+                    </div>
+                </div>
+            </section>
+
+            <!-- TESTIMONIALS (Referanslar) -->
+            <section id="testimonials" class="testimonial-section section-padding">
+                <div class="section-header">
+                    <h2>Kullanıcı Yorumları</h2>
+                    <p>Binlerce mutlu öğrenci ve öğretmen arasından sadece birkaçı.</p>
+                </div>
+                <div class="testimonial-grid">
+                    <div class="testi-card">
+                        <p>"Matematik derslerimde çok zorlanıyordum ama bu platform sayesinde harika bir öğretmen buldum. Notlarım yükseldi!"</p>
+                        <div class="testi-user">
+                            <div class="user-meta">
+                                <strong>Elif Y.</strong>
+                                <span>Üniversite Öğrencisi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testi-card">
+                        <p>"Kendi programımı yapabilmek ve öğrencilerle doğrudan iletişim kurabilmek muazzam bir özgürlük."</p>
+                        <div class="testi-user">
+                            <div class="user-meta">
+                                <strong>Ahmet K.</strong>
+                                <span>Fizik Öğretmeni</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testi-card">
+                        <p>"Teklif sistemi sayesinde bütçeme en uygun öğretmeni bulabildim. Herkese tavsiye ediyorum."</p>
+                        <div class="testi-user">
+                            <div class="user-meta">
+                                <strong>Selin D.</strong>
+                                <span>Lise Öğrencisi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQs (Sıkça Sorulan Sorular) -->
+            <section id="faq" class="faq-section section-padding">
+                <div class="section-header">
+                    <h2>Sıkça Sorulan Sorular</h2>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">Platforma üye olmak ücretli mi?</div>
+                        <div class="faq-answer">Hayır, platforma üye olmak ve ilanları incelemek tamamen ücretsizdir.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">Ders ücretlerini nasıl ödüyorum?</div>
+                        <div class="faq-answer">Ders ücretleri platform üzerinden belirlenir ve öğretmenle yaptığınız anlaşmaya göre elden veya transfer yoluyla ödenir.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">Teklif sistemi nasıl çalışıyor?</div>
+                        <div class="faq-answer">Beğendiğiniz bir öğretmene kendi belirlediğiniz saatlik ücreti teklif edebilirsiniz. Öğretmen onayladığında dersiniz başlar.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="landing-footer section-padding">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="logo">ÖZEL DERS PORTALI</div>
+                        <p>Eğitimin en kolay ve en şeffaf hali.</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Bağlantılar</h4>
+                        <a href="#hero">Ana Sayfa</a>
+                        <a href="#value-props">Neden Biz?</a>
+                        <a href="#faq">SSS</a>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>İletişim</h4>
+                        <p>E-posta: destek@ozelders.com</p>
+                        <p>Telefon: 0850 123 45 67</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Özel Ders Portalı. Tüm Hakları Saklıdır.</p>
+                </div>
+            </footer>
+
+            <!-- ALT BAR (BOTTOM DOCK) -->
+            <div class="auth-bottom-bar">
+                <div class="auth-bar-content">
+                    <div class="auth-info" style="font-weight: 700;">Hemen Aramıza Katılın veya Giriş Yapın</div>
+                    <div class="tab-buttons"
+                        style="margin-bottom:0; background:transparent; border:none; padding:0; gap: 10px;">
+                        <button class="auth-bar-btn" onclick="openAuthModal('login')"
+                            style="background:white; color:var(--text-main); border:1px solid var(--border-light);">Giriş
+                            Yap</button>
+                        <button class="auth-bar-btn blue-bubble" onclick="openAuthModal('register')"
+                            style="font-weight:800; letter-spacing:0.5px;">Üye Ol</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GİRİŞ / KAYIT MODALI (YENİ) -->
+        <div id="auth-modal" class="modal-overlay" style="display:none;">
+            <div class="auth-box" style="position:relative; width: 450px; max-width: 90%;">
+                <button type="button" onclick="closeAuthModal()"
+                    style="position:absolute; right:15px; top:15px; background:transparent; border:none; color:var(--text-muted); font-size:1.5rem; cursor:pointer; z-index: 10;">&times;</button>
+                
+                <!-- 1. SEÇİM EKRANI (DEVSASA BUTONLAR) -->
+                <div id="auth-selection-view">
+                    <h2 style="font-size: 2rem; text-align: center; margin-bottom: 30px;">Nasıl Başlamak İstersiniz?</h2>
+                    <div class="auth-choice-grid">
+                        <div class="choice-card login-card" onclick="switchAuthTab('login')">
+                            <div class="choice-icon">🔐</div>
+                            <h3>Giriş Yap</h3>
+                            <p>Mevcut hesabınızla devam edin</p>
+                        </div>
+                        <div class="choice-card register-card" onclick="switchAuthTab('register')">
+                            <div class="choice-icon">🚀</div>
+                            <h3>Üye Ol</h3>
+                            <p>Yeni bir hesap oluşturun</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="auth-forms-view" style="display:none;">
+                    <button type="button" onclick="openAuthModal('selection')" style="background:none; border:none; color:var(--primary); cursor:pointer; font-weight:600; margin-bottom:15px; display:flex; align-items:center; gap:5px;">← Geri Dön</button>
+                    <h2 id="auth-modal-title" style="font-size: 1.5rem;">Sisteme Katılın</h2>
+
+                <div class="tab-buttons" style="margin-bottom:20px; gap: 5px;">
+                    <button id="tab-login" onclick="switchAuthTab('login')">Giriş Yap</button>
+                    <button id="tab-register" onclick="switchAuthTab('register')">Üye Ol</button>
+                </div>
+
+                <!-- Giriş Formu -->
+                <form id="login-form">
+                    <div class="form-group">
+                        <label>Kullanıcı Adı</label>
+                        <input type="text" id="login-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Şifre</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit" class="primary-btn">Giriş Yap</button>
+                </form>
+
+                <!-- Kayıt Formu -->
+                <form id="register-form" style="display: none;">
+                    <div class="form-group">
+                        <label>Adınız Soyadınız</label>
+                        <input type="text" id="reg-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Kullanıcı Adı</label>
+                        <input type="text" id="reg-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Şifre</label>
+                        <input type="password" id="reg-password" required>
+                    </div>
+                    <div class="form-group" id="role-selection-group">
+                        <label>Rolünüz</label>
+                        <select id="reg-role" onchange="toggleRoleFields()" required>
+                            <option value="student">Öğrenci</option>
+                            <option value="teacher">Öğretmen</option>
+                        </select>
+                    </div>
+
+                    <div id="teacher-fields" style="display: none;">
+                        <div class="form-group">
+                            <label>Ders Vereceğiniz Branş Nedir?</label>
+                            <input type="text" id="reg-subject">
+                        </div>
+                        <div class="form-group">
+                            <label>Beklediğiniz Saatlik Ücret (TL)</label>
+                            <input type="number" id="reg-price">
+                        </div>
+                        <div class="form-group">
+                            <label>Haftada kaç saat ders verebilirsiniz?</label>
+                            <input type="text" id="reg-hours" placeholder="Örn: Hafta sonu öğleden sonra">
+                        </div>
+                    </div>
+
+                    <div id="student-fields">
+                        <div class="form-group">
+                            <label>Hangi Dersten Özel Ders Almak İstiyorsunuz?</label>
+                            <input type="text" id="reg-need-subject">
+                        </div>
+                        <div class="form-group">
+                            <label>Haftalık Kaç Saat Ders İhtiyacınız Var?</label>
+                            <input type="number" id="reg-need-hours">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="primary-btn" id="reg-submit-btn">Kayıt Ol</button>
+                </form>
+                </div> <!-- auth-forms-view kapatıldı -->
+            </div>
+        </div>
+
+
+        <!-- Dashboard Bölümü -->
+        <div id="dashboard-section" style="display: none;">
+
+            <!-- YENİ BÜYÜK NAVBAR -->
+            <nav class="navbar" style="flex-direction: column; gap: 15px; padding-bottom: 0;">
+                <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+                    <div class="logo">ÖZEL DERS PORTALI</div>
+                    <div class="nav-right">
+                        <span id="user-info-display"
+                            style="margin-right:20px; font-weight:600; color:var(--text-main);"></span>
+                        <button onclick="logout()" class="primary-btn"
+                            style="padding:10px 20px; font-size: 0.9rem; margin-top:0;">Çıkış Yap</button>
+                    </div>
+                </div>
+
+                <!-- ALT KATEGORİ MENÜSÜ -->
+                <div class="category-menu">
+                    <button class="cat-btn active" onclick="navigateView('listings')"
+                        id="btn-cat-listings">İlanlar</button>
+                    <button class="cat-btn" onclick="navigateView('chat')" id="btn-cat-chat">Sohbetler <span
+                            id="nav-chat-badge" class="badge-mini" style="display:none">0</span></button>
+                    <button class="cat-btn" onclick="navigateView('offers')" id="btn-cat-offers">Teklifler</button>
+                    <button class="cat-btn" onclick="navigateView('profile')" id="btn-cat-profile">Profilimi
+                        Düzenle</button>
+                </div>
+            </nav>
+
+            <!-- 1. GÖRÜNÜM: İLANLAR (TAM EKRAN) -->
+            <div id="view-listings" class="main-content" style="display: flex; flex-direction: column;">
+                <div class="listings-panel" style="width: 100%;">
+                    <h3 id="panel-title">İlanlar</h3>
+                    <div id="subject-filters" class="filter-container" style="display: none;"></div>
+                    <div id="listings-container" class="cards-grid">
+                        <!-- Tam ekran grid yapısında listelenecek kartlar -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. GÖRÜNÜM: SOHBETLER (GELEN KUTUSU + MESAJ EKRANI) -->
+            <div id="view-chat" class="main-content" style="display: none; align-items: stretch;">
+                <!-- Sol Panel: Konuşulan Kişiler (Inbox) -->
+                <div class="listings-panel inbox-panel"
+                    style="flex: 2; min-width: 300px; max-width: 350px; padding: 20px;">
+                    <h3 style="margin-bottom: 20px; font-size: 1.2rem;">Gelen Kutusu</h3>
+                    <div id="inbox-list" class="inbox-list">
+                        <!-- Javascript ile son konuşulanlar (mesajlaşanlar) eklenecek -->
+                    </div>
+                </div>
+
+                <!-- Sağ Panel: Mesajlaşma -->
+                <div class="messaging-panel" style="flex: 5;">
+                    <h3>Sohbet <span id="chat-with-name"></span></h3>
+                    <div id="messages-container" class="messages-container"></div>
+                    <form id="message-form" style="display: none;">
+                        <input type="text" id="message-input" placeholder="Mesaj yazın..." autocomplete="off" required>
+                        <button type="submit">Gönder</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- 3. GÖRÜNÜM: TEKLİFLER -->
+            <div id="view-offers" class="main-content" style="display: none; flex-direction: column;">
+                <div class="listings-panel" style="width: 100%;">
+                    <h3 id="offer-panel-title">Teklif Kutusu</h3>
+                    <div id="offers-container" class="cards-grid" style="margin-top: 20px;">
+                        <!-- Teklif Kartları Buraya Eklenecek -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. GÖRÜNÜM: PROFİL ve AYARLAR (Sekmeli Yapı) -->
+            <div id="view-profile" class="main-content" style="display: none; flex-direction: column; gap: 20px;">
+                <!-- Profil Alt Navigasyonu -->
+                <div class="sub-nav"
+                    style="display: flex; gap: 15px; border-bottom: 2px solid var(--border-light); padding-bottom: 10px; margin-bottom: 10px;">
+                    <button id="btn-sub-lessons" class="cat-btn active" onclick="switchProfileSubView('lessons')">Ders
+                        Ayarları</button>
+                    <button id="btn-sub-account" class="cat-btn" onclick="switchProfileSubView('account')">Hesap
+                        Ayarları</button>
+                </div>
+
+                <!-- ALT GÖRÜNÜM 1: DERS YÖNETİMİ -->
+                <div id="profile-lessons-view" class="listings-panel"
+                    style="width: 100%; max-width: 900px; margin: 0 auto; min-height: 500px; display: flex; gap: 30px;">
+                    <!-- Sol Taraf: Mevcut Dersler -->
+                    <div style="flex: 1; border-right: 1px solid var(--border-light); padding-right: 30px;">
+                        <h3 style="margin-bottom: 20px; font-size: 1.4rem;">Kayıtlı Derslerim</h3>
+                        <div id="student-lessons-list" class="lessons-container"
+                            style="display: flex; flex-direction: column; gap: 15px;">
+                            <!-- Dinamik olarak yüklenecek -->
+                        </div>
+                    </div>
+
+                    <!-- Sağ Taraf: Yeni Ders Ekle -->
+                    <div style="flex: 1;">
+                        <h3 style="margin-bottom: 20px; font-size: 1.4rem;">Yeni Derse Kaydol</h3>
+                        <form id="add-lesson-form" class="auth-box"
+                            style="padding: 25px; box-shadow: none; background: #f8fafc;">
+                            <div class="form-group">
+                                <label>Ders Branşı</label>
+                                <input type="text" id="new-lesson-subject" placeholder="Örn: Matematik, Fizik..."
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label>Haftalık Hedeflenen Saat</label>
+                                <input type="number" id="new-lesson-hours" placeholder="Örn: 4" required>
+                            </div>
+                            <button type="submit" class="primary-btn">Listeme Ekle</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- ALT GÖRÜNÜM 2: HESAP AYARLARI -->
+                <div id="profile-account-view" class="listings-panel"
+                    style="display: none; width: 100%; max-width: 600px; margin: 0 auto;">
+                    <h3 style="margin-bottom: 20px; font-size: 1.4rem;">Üyelik Bilgilerini Güncelle</h3>
+                    <form id="account-settings-form" class="auth-box"
+                        style="padding: 30px; background: white; box-shadow: 0 4px 20px rgba(37, 99, 235, 0.05);">
+                        <div class="form-group">
+                            <label>Adınız Soyadınız</label>
+                            <input type="text" id="acc-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Kullanıcı Adı (Değiştirilemez)</label>
+                            <input type="text" id="acc-username" readonly
+                                style="background:#f1f5f9; cursor:not-allowed;">
+                        </div>
+                        <div class="form-group">
+                            <label>Yeni Şifre</label>
+                            <input type="password" id="acc-password" required>
+                        </div>
+
+                        <!-- Öğretmenlere Özel Ek Alanlar (Javascript ile gösterilecek/gizlenecek) -->
+                        <div id="acc-teacher-fields"
+                            style="display:none; margin-top: 20px; padding-top: 20px; border-top: 1px dashed var(--border-light);">
+                            <div class="form-group">
+                                <label>Ders Branşınız</label>
+                                <input type="text" id="acc-subject">
+                            </div>
+                            <div class="form-group">
+                                <label>Saatlik Ücret (TL)</label>
+                                <input type="number" id="acc-price">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="primary-btn" style="margin-top:20px;">Değişiklikleri
+                            Kaydet</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Teklif Verme Modalı -->
+    <div id="offer-modal" class="modal-overlay" style="display:none;">
+        <div class="auth-box" style="position:relative; width: 400px; max-width: 90%;">
+            <button type="button" onclick="closeOfferModal()"
+                style="position:absolute; right:15px; top:15px; background:transparent; border:none; color:var(--text-muted); font-size:1.5rem; cursor:pointer;">&times;</button>
+            <h2 style="font-size: 1.5rem;">Ücret Teklifi Yap</h2>
+            <p style="color:var(--text-muted); margin-bottom:20px; font-size:0.9rem;">Öğretmene bütçenize göre yeni bir
+                <b>Saatlik Ücret (₺)</b> sunun.
+            </p>
+            <form id="offer-form">
+                <input type="hidden" id="offer-target-id">
+                <div class="form-group">
+                    <label>Teklifiniz (₺ / Saat)</label>
+                    <input type="number" id="offer-amount" required placeholder="Örn: 250">
+                </div>
+                <button type="submit" class="primary-btn"
+                    style="background: linear-gradient(135deg, #10b981, #059669);">Teklifi Gönder</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Bildirim Konteyneri -->
+    <div id="toast-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 10px; pointer-events: none;"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
